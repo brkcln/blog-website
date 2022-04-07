@@ -7,6 +7,7 @@
 		<title>mybestblog | home</title>
 		<script defer src="https://friconix.com/cdn/friconix.js"></script>
 		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
 	</head>
 	<body>
@@ -22,6 +23,11 @@
 					<li class="navbar__list-item"><a href="">Newsletter</a></li>
 					<li class="navbar__list-item"><a href="">Join Us</a></li>
 				</ul>
+				<button class="hamburger lg-hide">
+					<!-- material icons https://material.io/resources/icons/ -->
+					<i class="menuIcon material-icons">menu</i>
+					<i class="closeIcon material-icons">close</i>
+				</button>
 			</nav>
 		</header>
 		<main class="grid container">
@@ -157,8 +163,8 @@
 			<div class="main__videos">
 				<h2 class="headers">Videos</h2>
 				<div class="videos__post flex">
-					<iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=0&mute=1"> </iframe>
-					<iframe width="420" height="315" src="https://www.youtube.com/embed/b63vGc6WW0A?controls=0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+					<iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=0&mute=1"> </iframe>
+					<iframe src="https://www.youtube.com/embed/b63vGc6WW0A?controls=0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 			<div class="main__newsletter">
@@ -175,7 +181,7 @@
 				</form>
 			</div>
 		</main>
-		<footer style="background-color: var(--clr-black)">
+		<footer class="container" style="background-color: var(--clr-black)">
 			<h1>FOOTER</h1>
 		</footer>
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
