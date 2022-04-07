@@ -1,12 +1,23 @@
-var swiper = new Swiper(".mySwiper", {
-	spaceBetween: 30,
-	centeredSlides: true,
-	autoplay: {
-		delay: 2300,
-		disableOnInteraction: false,
-	},
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
-	},
+const menu = document.querySelector(".navbar__list");
+const menuItems = document.querySelectorAll(".navbar__list-item");
+const hamburger = document.querySelector(".hamburger");
+const closeIcon = document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+	if (menu.classList.contains("showMenu")) {
+		menu.classList.remove("showMenu");
+		closeIcon.style.display = "none";
+		menuIcon.style.display = "block";
+	} else {
+		menu.classList.add("showMenu");
+		closeIcon.style.display = "block";
+		menuIcon.style.display = "none";
+	}
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach(function (menuItems) {
+	menuItems.addEventListener("click", toggleMenu);
 });
