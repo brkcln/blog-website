@@ -86,6 +86,9 @@ h3 {
 		scroll-behavior: auto !important;
 	}
 }
+iframe {
+	max-width: 100%;
+}
 /* -----------------*/
 /*       Utility       */
 /* -----------------*/
@@ -117,7 +120,10 @@ h3 {
 	color: var(--clr-white);
 	text-align: center;
 }
-
+.lg-hide,
+.sm-hide {
+	display: none;
+}
 /* -----------------*/
 /*      navbar       */
 /* -----------------*/
@@ -238,6 +244,12 @@ nav li:hover > a {
 }
 .videos__post {
 	padding-inline: 1rem;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.videos__post iframe {
+	max-width: 90%;
 }
 /* -----------------*/
 /*    newsletter   */
@@ -277,6 +289,20 @@ input[type="submit"] {
 	background-color: rgba(59, 48, 48, 0.89);
 	color: rgba(228, 218, 218, 0.897);
 	cursor: pointer;
+}
+.hamburger {
+	position: fixed;
+	z-index: 100;
+	top: 1rem;
+	right: 1rem;
+	padding: 4px;
+	font-size: 1.2rem;
+	background: transparent;
+	cursor: pointer;
+	border: none;
+}
+.closeIcon {
+	display: none;
 }
 
 /* -----------------*/
@@ -326,5 +352,74 @@ input[type="submit"] {
 		grid-column: 1 / 4;
 		grid-row: 6;
 		align-self: center;
+	}
+}
+@media only screen and (max-width: 850px) {
+	.main__news {
+		grid-column: 1 / 5;
+		grid-row: 1;
+		margin-top: 4rem;
+	}
+	.main__news-small {
+		grid-row: 2;
+		grid-column: 1 / 5;
+	}
+	.main__sidebar {
+		grid-row: 3;
+		grid-column: 1 / 5;
+	}
+	.main__lastnews {
+		grid-row: 4;
+	}
+	.main__topnews {
+		grid-row: 5;
+	}
+	.main__videos {
+		grid-row: 6;
+	}
+	.main__newsletter {
+		grid-row: 7;
+		grid-column: 1 / 5;
+	}
+	.navbar__list {
+		display: none;
+	}
+	.hamburger {
+		display: inline-block;
+	}
+	.navbar__list {
+		position: fixed;
+		transform: translateY(-100%);
+		transition: transform 0.2s;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 99;
+		color: rgb(51, 50, 50);
+		list-style: none;
+		padding-top: 4rem;
+		-webkit-transform: translateY(-100%);
+		-moz-transform: translateY(-100%);
+		-ms-transform: translateY(-100%);
+		-o-transform: translateY(-100%);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: white;
+	}
+	nav {
+		position: fixed;
+		background-color: var(--bg-body);
+		width: 90%;
+	}
+	.navbar__list-item {
+		font-size: 1.5rem;
+		padding: 1rem;
+		margin-inline: 0.5rem;
+	}
+	.showMenu {
+		transform: translateY(0);
 	}
 }
